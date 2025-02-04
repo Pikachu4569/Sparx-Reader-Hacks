@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Text Analyzer",
+  "description": "Analyze text and answer questions",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["libs/compromise.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
